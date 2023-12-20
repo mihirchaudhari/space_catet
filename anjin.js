@@ -123,9 +123,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         if (!check) throw msg + new Error().stack;
       }
 Module['FS_createPath']("/", "res", true, true);
-Module['FS_createPath']("/res", "img", true, true);
-Module['FS_createPath']("/res", "music", true, true);
-Module['FS_createPath']("/res", "shaders", true, true);
+Module['FS_createPath']("/res", "space_catet", true, true);
 
       /** @constructor */
       function DataRequest(start, end, audio) {
@@ -193,7 +191,7 @@ Module['FS_createPath']("/res", "shaders", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/res/favicon.ico", "start": 0, "end": 15086}, {"filename": "/res/img/banana.png", "start": 15086, "end": 429870}, {"filename": "/res/img/cat.png", "start": 429870, "end": 539222}, {"filename": "/res/img/cat_bullet1.png", "start": 539222, "end": 539340}, {"filename": "/res/img/lose.png", "start": 539340, "end": 1276059}, {"filename": "/res/img/monkey_1.png", "start": 1276059, "end": 1380849}, {"filename": "/res/img/test_image.png", "start": 1380849, "end": 1423416}, {"filename": "/res/img/title.png", "start": 1423416, "end": 1845098}, {"filename": "/res/img/win.png", "start": 1845098, "end": 2345579}, {"filename": "/res/music/boss_theme.wav", "start": 2345579, "end": 16457623, "audio": 1}, {"filename": "/res/music/lose.wav", "start": 16457623, "end": 29158467, "audio": 1}, {"filename": "/res/music/title.wav", "start": 29158467, "end": 65849711, "audio": 1}, {"filename": "/res/music/win.wav", "start": 65849711, "end": 89415691, "audio": 1}, {"filename": "/res/shaders/htfs.glsl", "start": 89415691, "end": 89415798}, {"filename": "/res/shaders/htvs.glsl", "start": 89415798, "end": 89415927}, {"filename": "/res/shaders/imgfs.glsl", "start": 89415927, "end": 89416127}, {"filename": "/res/shaders/imgvs.glsl", "start": 89416127, "end": 89416513}, {"filename": "/res/shaders/txtfs.glsl", "start": 89416513, "end": 89416784}, {"filename": "/res/shaders/txtvs.glsl", "start": 89416784, "end": 89417048}], "remote_package_size": 89417048});
+    loadPackage({"files": [{"filename": "/res/space_catet/banana.png", "start": 0, "end": 414784}, {"filename": "/res/space_catet/boss_theme.wav", "start": 414784, "end": 14526828, "audio": 1}, {"filename": "/res/space_catet/cat.png", "start": 14526828, "end": 14636180}, {"filename": "/res/space_catet/cat_bullet1.png", "start": 14636180, "end": 14636298}, {"filename": "/res/space_catet/lose.png", "start": 14636298, "end": 15373017}, {"filename": "/res/space_catet/lose.wav", "start": 15373017, "end": 28073861, "audio": 1}, {"filename": "/res/space_catet/monkey_1.png", "start": 28073861, "end": 28178651}, {"filename": "/res/space_catet/title.png", "start": 28178651, "end": 28600333}, {"filename": "/res/space_catet/title.wav", "start": 28600333, "end": 65291577, "audio": 1}, {"filename": "/res/space_catet/win.png", "start": 65291577, "end": 65792058}, {"filename": "/res/space_catet/win.wav", "start": 65792058, "end": 89358038, "audio": 1}], "remote_package_size": 89358038});
 
   })();
 
@@ -1278,8 +1276,8 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  163528: () => { var window = document.createElement('canvas'); window.id = 'ANJIN_WINDOW'; window.style.backgroundColor = '#000'; document.body.appendChild(window); },  
- 163677: ($0) => { document.title = UTF8ToString($0); }
+  164536: () => { let loading = document.getElementById("loading"); document.body.removeChild(loading); let window = document.createElement('canvas'); window.id = 'ANJIN_WINDOW'; window.style.backgroundColor = '#000'; document.body.appendChild(window); },  
+ 164771: ($0) => { document.title = UTF8ToString($0); }
 };
 
 
