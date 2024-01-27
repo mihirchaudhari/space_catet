@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>anjin webapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="coi-serviceworker.min.js"></script>
   <!--<script src="https://greggman.github.io/webgl-lint/webgl-lint.js" crossorigin></script>-->
   <style>
@@ -113,12 +114,17 @@
   <script type="text/javascript">
     function wasm_time() {
       //console.log("I wasm'ed");
-      document.body.innerHTML = "<div id='loading'><div><span></span><span></span><span></span></div><p>Loading</p></div>";
-      
-      let scriptEle = document.createElement("script");
-      scriptEle.setAttribute("src", "anjin.js");
-      scriptEle.setAttribute("type", "text/javascript");
-      document.body.appendChild(scriptEle);
+      if (typeof SharedArrayBuffer !== 'undefined') {
+        document.body.innerHTML = "<div id='loading'><div><span></span><span></span><span></span></div><p>Loading</p></div>";
+        
+        let scriptEle = document.createElement("script");
+        scriptEle.setAttribute("src", "anjin.js");
+        scriptEle.setAttribute("type", "text/javascript");
+        document.body.appendChild(scriptEle);
+      }
+      else {
+        document.body.innerHTML = "<div><p>Woah, something's whack! Refreshing the page might fix this.</p></div>";
+      }
     }
   </script>
 </body>
